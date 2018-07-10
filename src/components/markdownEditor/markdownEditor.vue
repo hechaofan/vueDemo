@@ -1,8 +1,9 @@
 <template>
   <div>
-    <div id="editor">
+    哈哈
+    <!--<div id="editor">
       <mavon-editor style="height: 100%"></mavon-editor>
-    </div>
+    </div>-->
   </div>
 </template>
 

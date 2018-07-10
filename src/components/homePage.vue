@@ -16,23 +16,40 @@
     <router-link to="/markdownEditor">markdown编辑器</router-link>
     <br><br>
     <router-link to="/es6">es6</router-link>
+    <br><br>
+    <div @click="addressShow">点击显示三级联动</div>
+    <mintuiPicker v-if="addShow" :addressShow="addressShow" @myAddress="getAddress"></mintuiPicker>
+    {{address}}
   </div>
 </template>
 
 <script>
 import loadImg from './loadImgDemo.vue'
+import mintuiPicker from './mintui/mintui-picker.vue'
+
 const defaultImg = require('../assets/license.png')
 export default {
   components: {
-    loadImg
+    loadImg,
+    mintuiPicker
   },
   data () {
     return {
-      imgSrc: ''
+      imgSrc: '',
+      addShow: false,
+      address: '北京'
     }
   },
   created () {
     this.imgSrc = defaultImg
+  },
+  methods:{
+    addressShow () {
+        this.addShow = !this.addShow
+    },
+    getAddress (address) {
+        this.address = address
+    }
   }
 }
 </script>
