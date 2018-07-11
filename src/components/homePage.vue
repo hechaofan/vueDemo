@@ -37,7 +37,7 @@ export default {
     return {
       imgSrc: '',
       addShow: false,
-      address: '北京'
+      address: ''
     }
   },
   created () {
